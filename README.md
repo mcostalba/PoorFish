@@ -1,4 +1,4 @@
-# PoorFish
+# "Poor fish" Testset
 
 This is a chess testset in EPD format composed of puzzles considered very hard for chess engines. The aim is not testing the engines, but to collect and preserve positions that humans but not engines where able to solve (in reasonable time).
 
@@ -17,4 +17,4 @@ The list will grow with time, but the size of the list is not a point, the diffi
 
 Positions are collected from different sources, the origin of the position and eveltually the original testset will always be kept and granted the due credit, indeed anonymous positions are not allowed.
 
-Everybody is welcome for help and support both as porviding new puzzles or helping testing the suite.
+Everybody is welcome for help and support both as providing new puzzles or helping testing the suite.
