@@ -1,0 +1,51 @@
+# Site settings
+title: Nangka
+email: your@mail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to my awesome blog.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
+disqus_username: #Your disqus_username to add comments on the post
+
+# Optional settings
+github: #your github username
+linkedin: #linkedin username
+twitter:
+  username: #twitter username here
+facebook:
+  app_id: 1234
+  publisher: 1234
+google_plus: #gplus id or username
+ads: true # add your ad code in _includes/ad.html file
+
+
+# Build settings
+markdown: kramdown
+
+sass:
+    style: compressed
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+
+defaults:
+    - {scope: {type: posts}, values: {layout: post, permalink : '/:year/:title'}}
+
+include:
+  - _pages
+
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+paginate: 5
+paginate_path: 'p/:num'

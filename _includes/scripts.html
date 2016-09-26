@@ -1,0 +1,4 @@
+<script type="text/javascript" src="{{'/assets/js/jquery-1.11.2.min.js' | prepend:site.baseurl }}"></script>
+{% for script in page.scripts %}<script type="text/javascript" src="{{'/assets/js/' | prepend:site.baseurl | append: script }}"></script>{% endfor %}
+<script type="text/javascript" src="{{'/assets/js/scripts.js' | prepend:site.baseurl }}"></script>
+{% include google-analytics.html %}

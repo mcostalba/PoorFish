@@ -1,48 +1,28 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Poorfish by mcostalba</title>
+---
+layout: default
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Poorfish</h1>
-        <p>Very hard chess testset</p>
-
-        <p class="view"><a href="https://github.com/mcostalba/PoorFish">View the Project on GitHub <small>mcostalba/PoorFish</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/mcostalba/PoorFish/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/mcostalba/PoorFish/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/mcostalba/PoorFish">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a id="Šachová-skladba-2011-12-1st-prize" class="anchor" href="#%C5%A0achov%C3%A1-skladba-2011-12-1st-prize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Šachová skladba 2011-12, 1st Prize</h3>
-
-<p>![pf_001_diagram][[pf001.png]]</p>
-
-<p>FEN: 4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - -
-Best move: f4
-Source: Arasan 19.189</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/mcostalba">mcostalba</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p class="description">
+            {% if post.description %}
+                {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+            {% else %}
+                {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+            {% endif %}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% if paginator.total_pages > 1 %}<!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="prev">Newer Posts</a> {% endif %}
+    {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Older Posts</a>{% endif %}
+  </div>{% endif %}
