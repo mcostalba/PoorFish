@@ -2,21 +2,15 @@
 title: Poor Fish Testsuite
 email: your@mail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my awesome blog.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+  Very hard chess test suite
+baseurl: "/mcostalba/PoorFish" # the subpath of your site, e.g. /blog
+url: "https://github.com" # the base hostname & protocol for your site
 google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
 disqus_username: #Your disqus_username to add comments on the post
 
 # Optional settings
 github: #your github username
 linkedin: #linkedin username
-twitter:
-  username: #twitter username here
-facebook:
-  app_id: 1234
-  publisher: 1234
-google_plus: #gplus id or username
 ads: false # add your ad code in _includes/ad.html file
 
 
