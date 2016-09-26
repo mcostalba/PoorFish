@@ -5,13 +5,13 @@ description: > # this means to ignore newlines until "baseurl:"
   Very hard chess test suite
 baseurl: "/PoorFish" # the subpath of your site, e.g. /blog
 url: "https://github.com" # the base hostname & protocol for your site
-google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
-disqus_username: #Your disqus_username to add comments on the post
+#google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
+#disqus_username: #Your disqus_username to add comments on the post
 
 # Optional settings
-github: #your github username
-linkedin: #linkedin username
-ads: false # add your ad code in _includes/ad.html file
+#github: #your github username
+#linkedin: #linkedin username
+#ads: false # add your ad code in _includes/ad.html file
 
 
 # Build settings
@@ -41,5 +41,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-paginate: 5
+paginate: 15
 paginate_path: 'p/:num'
+
+excerpt_separator: <!--more-->
+

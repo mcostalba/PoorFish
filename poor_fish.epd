@@ -1,6 +1,6 @@
 rn1q1rk1/2pbb3/pn2p3/1p1pPpp1/3P4/1PNBBN2/P1P1Q1PP/R4R1K w - - bm Nxg5; id "arasan19.16"; c0 "Dann Corbit, CCC 2015";
 rn1qr1k1/1p2bppp/p3p3/3pP3/P2P1B2/2RB1Q1P/1P3PP1/R5K1 w - - bm Bxh7+; id "arasan19.42"; c0 "Polugaevsky-Torre, London 1984";
-8/4nk2/1p3p2/1r1p2pp/1P1R1N1P/6P1/3KPP2/8 w - - bm Nd3; id "arasan19.116"; c0 "Grandelius-Raznikov, EU Youth Chess Ch B18, Albena 2011";
+8/4nk2/1p3p2/1r1p2pp/1P1R1N1P/6P1/3KPP2/8 w - - 1 50 bm Nd3; id "arasan19.116"; c0 "Grandelius-Raznikov, EU Youth Chess Ch B18, Albena 2011";
 3r1r1k/pp5p/4b1pb/6q1/3P4/4p1BP/PP2Q1PK/3RRB2 b - - bm Qxg3+; id "arasan19.137"; c0 "Apicella-Lautier, Clichy 2001";
 r1b2rk1/1pq1nppp/pbn1p3/8/3N4/3BBN2/PPP1QPPP/3R1RK1 w - - bm Bxh7+; id "arasan19.159"; c0 "Leu-Muck, DDR-ch H137 corr 1973";
 r1b3r1/5p1k/p1n2P1p/P1qpp1P1/1p1p4/3P2Q1/BPPB2P1/R4RK1 w - - bm Kf2; id "arasan19.179"; c0 "Efremov-Fischer, Danube/4 ICCF 2012";

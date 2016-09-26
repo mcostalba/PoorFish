@@ -16,7 +16,7 @@ layout: default
             {% if post.description %}
                 {{ post.description | strip_html | strip_newlines | truncate: 250 }}
             {% else %}
-                {{ post.content }}
+                {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
             {% endif %}</p>
       </li>
     {% endfor %}
