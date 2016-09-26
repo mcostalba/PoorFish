@@ -1,5 +1,5 @@
 # Site settings
-title: Nangka
+title: Poor Fish Testsuite
 email: your@mail.com
 description: > # this means to ignore newlines until "baseurl:"
   Welcome to my awesome blog.
@@ -17,7 +17,7 @@ facebook:
   app_id: 1234
   publisher: 1234
 google_plus: #gplus id or username
-ads: true # add your ad code in _includes/ad.html file
+ads: false # add your ad code in _includes/ad.html file
 
 
 # Build settings
