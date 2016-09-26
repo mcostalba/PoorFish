@@ -3,7 +3,7 @@ title: Poor Fish Testsuite
 email: your@mail.com
 description: > # this means to ignore newlines until "baseurl:"
   Very hard chess test suite
-baseurl: "/mcostalba/PoorFish" # the subpath of your site, e.g. /blog
+baseurl: "/PoorFish" # the subpath of your site, e.g. /blog
 url: "https://github.com" # the base hostname & protocol for your site
 google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
 disqus_username: #Your disqus_username to add comments on the post
