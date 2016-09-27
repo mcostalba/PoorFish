@@ -161,16 +161,16 @@
 }
 .post-header {
     margin-bottom: $spacing-unit + 10;
-    text-align: center;
+    text-align: left;
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 28px;
     }
 }
 
