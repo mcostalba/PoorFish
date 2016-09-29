@@ -1,0 +1,93 @@
+2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; c0 "Gashimov-Azarov, FIDE World Cup 2011"; DBI 1
+
+[Event "FIDE World Cup 2011"]
+[Site "Khanty-Mansiysk RUS"]
+[Date "2011.08.31"]
+[Round "2.1"]
+[White "Gashimov, V."]
+[Black "Azarov, S."]
+[Result "1-0"]
+[WhiteElo "2760"]
+[BlackElo "2648"]
+[ECO "C63"]
+[EventDate "2011.??.??"]
+[PlyCount "45"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 f5 4.d3 fxe4 5.dxe4 Nf6 6.Be3 Bb4+ 7.c3 Be7 8.Bxc6
+bxc6 9.Nxe5 Ba6 10.Nd2 Rb8 11.Qa4 Qc8 12.O-O-O O-O 13.Bg5 Kh8 14.c4 c5 15.
+h4 Rb6 16.h5 d6 17.Ng6+ hxg6 18.hxg6+ Kg8 19.Qa3 Qg4 20.f4 Rfb8 21.Rh4 Qe6
+22.Rdh1 Kf8 23.f5 1-0
+
+
+2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; c0 "Gashimov-Azarov, FIDE World Cup 2011"; DBI 1
+
+[Event "Smirin vs Computers"]
+[Site "KC-CB INT"]
+[Date "2002.04.24"]
+[Round "6"]
+[White "Smirin, I."]
+[Black "HIARCS 8"]
+[Result "1/2-1/2"]
+[WhiteElo "2685"]
+[ECO "A30"]
+[EventDate "2002.??.??"]
+[PlyCount "119"]
+
+1.c4 c5 2.Nf3 Nf6 3.g3 d5 4.cxd5 Nxd5 5.Bg2 Nc6 6.d4 cxd4 7.Nxd4 Ndb4 8.
+Nxc6 Qxd1+ 9.Kxd1 Nxc6 10.Nc3 Bd7 11.Be3 e5 12.Rc1 Rd8 13.Ke1 Be7 14.f4
+exf4 15.gxf4 O-O 16.Nd5 Bd6 17.Kf2 Be6 18.Rhd1 Rd7 19.Nc3 Rfd8 20.a3 Ne7
+21.Be4 Nf5 22.Bxf5 Bxf5 23.Rd4 a6 24.Na4 Be7 25.Rxd7 Bxd7 26.Nc3 Bh4+ 27.
+Kg1 f5 28.Rd1 Bc6 29.Rxd8+ Bxd8 30.Bd4 Kf7 31.e3 h6 32.Ne2 g5 33.Kf2 Bc7
+34.Bc3 Be4 35.Kg3 g4 36.Bd4 Kg6 37.Kf2 h5 38.Bc3 Bd8 39.Bd4 a5 40.Bc3 a4
+41.Nd4 Bh4+ 42.Kg1 Be7 43.Kf2 Bd5 44.Kg3 h4+ 45.Kf2 Be4 46.Kg1 g3 47.h3
+Bc5 48.Bb4 Bxb4 49.axb4 Kf7 50.Nb5 Ke6 51.Nc3 Bc2 52.Kg2 Kd6 53.Kg1 Kc6
+54.Kg2 b5 55.Kg1 Bd3 56.Kg2 Be4+ 57.Kg1 Bc2 58.Kg2 Bd3 59.Kg1 Be4 60.Kf1
+1/2-1/2
+
+
+r1bqkb1r/ppp3pp/n3pn2/1N1p1p2/3P1B2/4P3/PPP2PPP/R2QKBNR w KQkq - 2 6 bm c4; id "hard2016.118"; c0 "Shtyrenkov-Krouzel, Komercni Bank 1996";DBI 1
+
+[Event "Komercni Bank"]
+[Site "Pardubice open"]
+[Date "1996.07.12"]
+[Round "1"]
+[White "Shtyrenkov, V."]
+[Black "Krouzel, J."]
+[Result "1-0"]
+[WhiteElo "2450"]
+[BlackElo "2240"]
+[ECO "A80"]
+[EventDate "1996.??.??"]
+[PlyCount "78"]
+
+1.d4 f5 2.Nc3 d5 3.Bf4 Nf6 4.e3 e6 5.Nb5 Na6 6.c4 Bb4+ 7.Nc3 O-O 8.a3
+Bxc3+ 9.bxc3 c5 10.Bd3 Qa5 11.Ne2 Bd7 12.O-O dxc4 13.Bxc4 b5 14.Ba2 c4 15.
+a4 bxa4 16.Bxc4 Nd5 17.Bb3 Nb6 18.Be5 Qb5 19.Ba2 Nc4 20.Rb1 Qc6 21.Bg3
+Rfc8 22.Nf4 Nc7 23.Rb4 Nb6 24.c4 Kh8 25.Nd3 Qe4 26.Ne5 Bc6 27.Nxc6 Qxc6
+28.Bxc7 Rxc7 29.Qf3 a3 30.Ra1 Rac8 31.c5 Nd5 32.Bxd5 Qxd5 33.Qxd5 exd5 34.
+Rxa3 Re8 35.h4 Kg8 36.g3 Kf7 37.Kg2 Kf6 38.Ra6+ Re6 39.Rba4 h6 1-0
+
+
+r5k1/p1pb2bp/3p3r/P1pPp1p1/2B1Pq2/1R2QPp1/1P4PP/5RBK b - - 3 28 bm Rxh2+; id "hard2016.144"; c0 "Summerscale-Jones, Torquay 2009";DBI 2
+
+[Event "96th ch-GBR"]
+[Site "Torquay ENG"]
+[Date "2009.07.31"]
+[Round "5"]
+[White "Summerscale, A."]
+[Black "Jones, G."]
+[Result "0-1"]
+[WhiteElo "2454"]
+[BlackElo "2554"]
+[ECO "E99"]
+[EventDate "2009.07.27"]
+[PlyCount "64"]
+[WhiteTeamCountry "SRI"]
+[BlackTeamCountry "LTU"]
+
+1.Nf3 Nf6 2.c4 g6 3.Nc3 Bg7 4.d4 O-O 5.e4 d6 6.Be2 e5 7.O-O Nc6 8.d5 Ne7
+9.Ne1 Nd7 10.Be3 f5 11.f3 f4 12.Bf2 g5 13.a4 Rf6 14.a5 Rh6 15.Kh1 Nf6 16.
+c5 Qe8 17.Ra3 Qh5 18.Bg1 Qh4 19.Bb5 Nh5 20.Ne2 Ng3+ 21.Nxg3 fxg3 22.Nd3
+Ng6 23.c6 Nf4 24.Nxf4 Qxf4 25.Qe1 bxc6 26.Bc4 c5 27.Rb3 Bd7 28.Qe3 Rxh2+
+29.Bxh2 Qh4 30.Qg1 Rf8 31.Rb7 Rf4 32.Rxc7 Qh6 0-1
+
