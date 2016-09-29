@@ -1,3 +1,5 @@
+DBT test 120+120secs, CPU i5-3230M 2 cores @2.6Ghz
+
 1b6/2p5/1kB5/1PN5/8/3K4/8/q7 w - - bm Nb3; id "hard2016.1"; DBI 2
 1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein; DBI 2
 1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - bm Re8+; id "hard2016.14";Bagirov-Grigorian; DBI 2
@@ -29,7 +31,7 @@ r1bqkb1r/ppp3pp/n3pn2/1N1p1p2/3P1B2/4P3/PPP2PPP/R2QKBNR w KQkq - bm c4; id "hard
 r2qrbk1/1b3p2/3p2pB/1p1P1N2/1np1P3/5NRP/1P3PP1/1B1Qn1K1 w - - bm N3h4; id "hard2016.129"; DBI 1
 
 
-Failed Vincent verification
+Failed Vincent verification (300 secs per move X 3 runs, 6 cores 4 GHz, 8 GB HT, 6 pcs Syzygy)
 1r3rk1/5p1p/p2pb1p1/3Np1P1/2pRPR2/qP2Q1N1/P1PK3P/8 w - - bm Nf5; id "hard2016.9"; DBI 2
 5N2/6N1/q2k3p/8/6p1/4K1PP/B5P1/8 w - - bm Nf5+; id "hard2016.55"; DB 2
 q7/b1p5/kp1p4/p2PN3/PPP5/1K6/8/5B2 w - - bm c5+; id "hard2016.103"; DBI 2
