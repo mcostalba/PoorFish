@@ -1,11 +1,11 @@
 1b6/2p5/1kB5/1PN5/8/3K4/8/q7 w - - bm Nb3; id "hard2016.1"; DBI 2
-1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein; DBI 2
-1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - bm Re8+; id "hard2016.14";Bagirov-Grigorian; DBI 2
+1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - 0 48 bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein, USSR 1963; DBI 2
+1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - bm Re8+; id "hard2016.14"; DBI 2
 2b1r3/r2ppN2/8/1p1p1k2/pP1P4/2P3R1/PP3PP1/2K5 w - - bm Nd6+; id "hard2016.19"; DBI 2
 2r1r1k1/4bppp/1q4n1/3pP3/p1pP4/PnR2NBP/1P4P1/1B1QR2K w - - bm e6; id "hard2016.29"; DBI 2
 3k4/2pq3p/pp5R/4P3/P6P/2PN4/1PN3K1/8 w - - bm Nd4; id "hard2016.39"; DBI 2
 3k4/4pp2/n2n4/5BN1/3N4/b7/4K3/8 w - - bm Nxf7+; id "hard2016.40"; DBI 2
-4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "Šachová skladba 2011-12, 1st Prize"; DBI 2
+4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011-12"; DBI 2
 4k1br/1K1p1n1r/2p2pN1/P2p1N2/2P3pP/5B2/P2P4/8 w - - bm Kc8; id "hard2016.49"; DBI 2
 4q1kr/p6p/1prQPppB/4n3/4P3/2P5/PP2B2P/R5K1 w - - 1 24 bm Qxe5; id "gusev"; c0 "Gusev-Auerbach, Chelyabinsk, 1946"; DBI 2
 5nr1/2Pp2pk/3Pp1p1/4P1P1/6P1/5K2/8/7n w - - bm c8=N; id "hard2016.58" DBI 2

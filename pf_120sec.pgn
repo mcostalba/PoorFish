@@ -19,7 +19,7 @@ h4 Rb6 16.h5 d6 17.Ng6+ hxg6 18.hxg6+ Kg8 19.Qa3 Qg4 20.f4 Rfb8 21.Rh4 Qe6
 22.Rdh1 Kf8 23.f5 1-0
 
 
-2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; c0 "Gashimov-Azarov, FIDE World Cup 2011"; DBI 1
+8/1p2b3/6k1/5p2/p2NbP1p/P1B1P1p1/1P5P/6K1 w - - 0 47 bm h3; id "hard2016.78"; c0 "Smirin-HIARCS 8, 2002"; DBI 2
 
 [Event "Smirin vs Computers"]
 [Site "KC-CB INT"]
@@ -91,3 +91,60 @@ c5 Qe8 17.Ra3 Qh5 18.Bg1 Qh4 19.Bb5 Nh5 20.Ne2 Ng3+ 21.Nxg3 fxg3 22.Nd3
 Ng6 23.c6 Nf4 24.Nxf4 Qxf4 25.Qe1 bxc6 26.Bc4 c5 27.Rb3 Bd7 28.Qe3 Rxh2+
 29.Bxh2 Qh4 30.Qg1 Rf8 31.Rb7 Rf4 32.Rxc7 Qh6 0-1
 
+
+4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011-12"; DBI 2
+http://www.jsbeasley.co.uk/ochess/salaistudy.pdf
+
+1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - 0 48 bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein, USSR 1963; DBI 2
+
+[Event "USSR"]
+[Site "USSR"]
+[Date "1963.??.??"]
+[EventDate "?"]
+[Round "?"]
+[Result "0-1"]
+[White "Stefan Brzozka"]
+[Black "David Bronstein"]
+[ECO "A88"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "140"]
+
+1. c4 f5 2. Nf3 Nf6 3. g3 g6 4. Bg2 Bg7 5. O-O O-O 6. d4 d6
+7. Nc3 c6 8. Qc2 Kh8 9. b3 Na6 10. Bb2 Nc7 11. Rad1 Bd7 12. e3
+Qe8 13. Rfe1 Rd8 14. Rd2 Nh5 15. d5 Qf7 16. dxc6 bxc6 17. Ne2
+c5 18. Nf4 Nf6 19. Ng5 Qg8 20. Bc3 Rde8 21. Ba5 Ne6 22. Ngxe6
+Bxe6 23. Nxe6 Qxe6 24. Qd3 Ne4 25. Qd5 Qxd5 26. Rxd5 Bc3
+27. Bxc3+ Nxc3 28. Rd2 Ne4 29. Rb2 a5 30. f3 Nf6 31. Kf2 Rb8
+32. Ke2 Rb6 33. Kd3 e5 34. f4 e4+ 35. Kc3 Kg7 36. Bf1 h5
+37. h4 Rfb8 38. Be2 a4 39. Reb1 a3 40. Rd2 Kf7 41. Rbd1 Ke7
+42. Rd5 Ne8 43. R1d2 Nc7 44. Bd1 Na6 45. Bc2 Nb4 46. Bb1 Ra6
+47. Rd1 Nxd5+ 48. Rxd5 Rxb3+ 49. Kxb3 Rb6+ 50. Kc2 Rb2+
+51. Kc1 Re2 52. Rd1 Rxe3 53. Rg1 Rc3+ 54. Kd2 Rxc4 55. Bc2 d5
+56. Rb1 d4 57. Bd1 Rc3 58. Rb3 e3+ 59. Ke2 Rc1 60. Rxa3 c4
+61. Ra7+ Kd6 62. Ba4 Rh1 63. Rd7+ Kc5 64. Rc7+ Kb4 65. a3+ Kc3
+66. Bb5 Rh2+ 67. Kf1 d3 68. Rxc4+ Kb2 69. Kg1 e2 70. Kxh2 e1=Q
+0-1
+
+4q1kr/p6p/1prQPppB/4n3/4P3/2P5/PP2B2P/R5K1 w - - 1 24 bm Qxe5; id "gusev"; c0 "Gusev-Auerbach, Chelyabinsk, 1946"; DBI 2
+
+[Event "Molniya Sporting Society"]
+[Site "Chelyabinsk RUS"]
+[Date "1946.??.??"]
+[EventDate "?"]
+[Round "5"]
+[Result "1-0"]
+[White "Yuri S Gusev"]
+[Black "E Auerbach"]
+[ECO "B70"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "73"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.Be2 Nc6 7.Nb3
+Bg7 8.O-O Be6 9.f4 Rc8 10.f5 Bd7 11.g4 Ne5 12.g5 Ng8 13.Nd5 f6
+14.Be3 b6 15.Nd4 Kf7 16.c3 Qe8 17.Ne6 Bxe6 18.fxe6+ Kf8
+19.Nxf6 Nxf6 20.gxf6 Bxf6 21.Bh6+ Kg8 22.Rxf6 exf6 23.Qxd6 Rc6
+24.Qxe5 fxe5 25.Rf1 Rc8 26.Bd1 Rc4 27.Bb3 b5 28.Bxc4 bxc4
+29.b3 a5 30.bxc4 Qe7 31.Kg2 Qa3 32.Rf2 Qe7 33.Rf1 g5 34.Rf5 g4
+35.c5 Qd8 36.c6 Qe7 37.c7 1-0
