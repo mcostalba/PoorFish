@@ -1,3 +1,7 @@
+4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011-12"; DBI 2
+http://www.jsbeasley.co.uk/ochess/salaistudy.pdf
+
+
 2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; c0 "Gashimov-Azarov, FIDE World Cup 2011"; DBI 1
 
 [Event "FIDE World Cup 2011"]
@@ -92,9 +96,6 @@ Ng6 23.c6 Nf4 24.Nxf4 Qxf4 25.Qe1 bxc6 26.Bc4 c5 27.Rb3 Bd7 28.Qe3 Rxh2+
 29.Bxh2 Qh4 30.Qg1 Rf8 31.Rb7 Rf4 32.Rxc7 Qh6 0-1
 
 
-4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011-12"; DBI 2
-http://www.jsbeasley.co.uk/ochess/salaistudy.pdf
-
 1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - 0 48 bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein, Miskolc 1963; DBI 2
 
 [Event "USSR"]
@@ -126,6 +127,7 @@ Bxe6 23. Nxe6 Qxe6 24. Qd3 Ne4 25. Qd5 Qxd5 26. Rxd5 Bc3
 66. Bb5 Rh2+ 67. Kf1 d3 68. Rxc4+ Kb2 69. Kg1 e2 70. Kxh2 e1=Q
 0-1
 
+
 4q1kr/p6p/1prQPppB/4n3/4P3/2P5/PP2B2P/R5K1 w - - 1 24 bm Qxe5; id "gusev"; c0 "Gusev-Auerbach, Chelyabinsk, 1946"; DBI 2
 
 [Event "Molniya Sporting Society"]
@@ -148,3 +150,253 @@ Bg7 8.O-O Be6 9.f4 Rc8 10.f5 Bd7 11.g4 Ne5 12.g5 Ng8 13.Nd5 f6
 24.Qxe5 fxe5 25.Rf1 Rc8 26.Bd1 Rc4 27.Bb3 b5 28.Bxc4 bxc4
 29.b3 a5 30.bxc4 Qe7 31.Kg2 Qa3 32.Rf2 Qe7 33.Rf1 g5 34.Rf5 g4
 35.c5 Qd8 36.c6 Qe7 37.c7 1-0
+
+
+1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - 0 24 bm Re8+; id "hard2016.14"; c0 "Bagirov-Grigorian, URS 1976"; DBI 2
+
+[Event "URS"]
+[Site "URS"]
+[Date "1976.??.??"]
+[EventDate "?"]
+[Round "?"]
+[Result "1-0"]
+[White "Vladimir Bagirov"]
+[Black "Karen Ashotovich Grigorian"]
+[ECO "A01"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "59"]
+
+1.b3 Nf6 2.Bb2 g6 3.e4 d6 4.g3 Bg7 5.Bg2 O-O 6.Ne2 e5 7.O-O
+Nh5 8.d4 Nd7 9.Nd2 Qe7 10.f4 exd4 11.Bxd4 f5 12.Bxg7 Nxg7
+13.Nc3 Nf6 14.Re1 Qd8 15.Nc4 fxe4 16.Nxe4 Nxe4 17.Bxe4 Rb8
+18.Qd4 b6 19.Bd5+ Kh8 20.Re3 c5 21.Qc3 b5 22.Rae1 Qf6 23.Qxf6
+Rxf6 24.Re8+ Nxe8 25.Rxe8+ Kg7 26.Rg8+ Kh6 27.Ne3 a5 28.h4 a4
+29.Kf2 c4 30.b4 1-0
+
+
+8/3P3k/n2K3p/2p3n1/1b4N1/2p1p1P1/8/3B4 w - - bm Nf6+; id "hard2016.82"; c0 "study by Van Breukelen"; DBI 2
+Study, hard to find the source ...
+http://www.ficgs.com/problem_read_556-Maybe-the-hardest-chess-puzzle-ever.html
+
+-------------------------------------------------------------------------------------------------------------------------
+
+r6r/4k3/p2bP2p/2n2PP1/2BQn2P/1pP1p3/1q1BK3/3R3R b - - bm Qc2; id "hard2016.149"; DBI 2
+
+Variation from Morozevich vs. Vachier-Lagrave, Biel 2009
+
+[Event "Biel International Chess Festival"]
+[Site "Biel SUI"]
+[Date "2009.07.28"]
+[EventDate "2009.07.19"]
+[Round "8"]
+[Result "0-1"]
+[White "Alexander Morozevich"]
+[Black "Maxime Vachier-Lagrave"]
+[ECO "B80"]
+[WhiteElo "2751"]
+[BlackElo "2703"]
+[PlyCount "152"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. f3 e6
+7. Be3 b5 8. Qd2 Nbd7 9. g4 h6 10. O-O-O b4 11. Nce2 Qc7
+12. h4 d5 13. Nf4 e5 14. Nfe6 fxe6 15. Nxe6 Qa5 16. exd5 Qxa2
+17. Qd3 Kf7 18. g5 Nxd5 19. Bh3 Nxe3 20. Nd8+ Ke7 21. Nc6+ Kf7
+22. g6+ Kg8 23. Qxe3 Bc5 24. Qe4 Nf8 25. Rd8 Bb7 26. Rxa8 Bxa8
+27. h5 Rh7 28. Re1 Bxc6 29. Qxc6 Bd4 30. Kd2 Qxb2 31. Qc4+ Kh8
+32. Kd3 a5 33. Qc8 Qa3+ 34. Ke4 b3 35. cxb3 a4 36. Rb1 Qb4
+37. Qc4 Qb7+ 38. Qd5 Qb4 39. Qc4 Qd2 40. Bg4 a3 41. Qf7 Qc2+
+42. Kd5 Qc5+ 43. Ke4 a2 44. Rc1 a1=Q 45. Rxc5 Bxc5 46. Qd5
+Qe1+ 47. Kd3 Qd1+ 48. Kc4 Qxd5+ 49. Kxd5 Ba3 50. Bf5 Kg8
+51. Kxe5 Rh8 52. Kd5 Nh7 53. gxh7+ Kf7 54. Bg6+ Kf6 55. f4 Bc1
+56. f5 Bd2 57. Kd6 Be1 58. Kd7 Bb4 59. Kc7 Ke5 60. Kd7 Ba3
+61. Kc6 Kd4 62. Kc7 Kc3 63. Kd7 Kb4 64. Kd6 Kxb3+ 65. Kd5 Bb2
+66. Kd6 Bf6 67. Kc5 Kc3 68. Kd6 Kd4 69. Kc6 Rd8 70. Kb6 Kd5
+71. Kc7 Kc5 72. Bf7 g5 73. fxg6 Rd6 74. Be8 Be5 75. Kb7 Rb6+
+76. Kc8 Kd6 0-1
+
+
+5N2/6N1/q2k3p/8/6p1/4K1PP/B5P1/8 w - - bm Nf5+; id "hard2016.55"; DB 2
+
+Kasparjan, Genrich
+Breider-60 JT 1968
+2nd Prize
+?????https://www.chess.com/forum/view/more-puzzles/kasparians-prize-composition
+
+-------------------------------------------------------------------------------------------------------------------------
+
+1rb2r1k/3p1pp1/p3p2p/1p2P3/4q3/1N2B1R1/PPP1N1P1/2KR1B2 w - - bm Nf4; id "hard2016.13"; DBI 1
+
+http://immortalchess.net/forum/archive/index.php/t-172-p-6.html
+iccf 2011
+
+-------------------------------------------------------------------------------------------------------------------------
+
+r1b2rk1/2q1bppp/p2pp3/2n3PQ/1p1BP3/1BN5/PPP2P1P/2KR2R1 w - - 0 16 bm Bf6; id "hard2016.108"; c0 "Hennings-Moehring, Colditz 1967";DBI 1
+
+10 games with this position in the millions database.
+
+The oldest game :
+[Event "Colditz"]
+[Site "Colditz"]
+[Date "1967.??.??"]
+[Round "1"]
+[White "Hennings, Arthur (wh)"]
+[Black "Moehring, Gunther (bl)"]
+[Result "1-0"]
+[ECO "B89"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 d6 5.Nc3 e6 6.Be3 Nf6 7.Bc4 Be7 8.Qe2
+O-O 9.O-O-O Qc7 10.Bb3 a6 11.g4 b5 12.g5 Nxd4 13.Bxd4 Nd7 14.Rhg1 Nc5 15.
+Qh5 b4 16.Bf6 Re8 17.Rg3 bxc3 18.Rh3 cxb2+ 19.Kb1 Bxf6 20.gxf6 Kf8 21.e5
+Ne4 22.fxg7+ Ke7 23.Qh4+ f6 24.Qxe4 d5 25.g8=Q Rxg8 26.Qxh7+ 1-0
+
+-------------------------------------------------------------------------------------------------------------------------
+
+r2qrbk1/1b3p2/3p2pB/1p1P1N2/1np1P3/5NRP/1P3PP1/1B1Qn1K1 w - - bm N3h4; id "hard2016.130"; DBI 1
+
+Suggested by Evgeniy Zheltonozhskiy
+http://www.talkchess.com/forum/viewtopic.php?p=662017#662017
+
+-------------------------------------------------------------------------------------------------------------------------
+
+q7/b1p5/kp1p4/p2PN3/PPP5/1K6/8/5B2 w - - bm c5+; id "hard2016.103"; DBI 2
+Neghina, Mihai
+Componist (E07) 2012
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2r1r1k1/4bppp/1q4n1/3pP3/p1pP4/PnR2NBP/1P4P1/1B1QR2K w - - bm e6; id "hard2016.29"; DBI 2
+As pointed by Dann Corbit : "Gaprindashvili-Bliss, CorrGame 1994"
+
+-------------------------------------------------------------------------------------------------------------------------
+
+3k4/2pq3p/pp5R/4P3/P6P/2PN4/1PN3K1/8 w - - bm Nd4; id "hard2016.39"; DBI 2
+https://glarean-magazin.ch/2009/10/01/studie_glarean_martan_neghina/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "Šachová skladba 2011-12, 1st Prize"; DBI 2
+Salai, Ladislav Jr.
+Šachová skladba (111/10628) 2011-04
+http://www.yacpdb.org/#search/NEsxazE4MXA1cDFQcDNiMTgxUDNQMlAxQjJQMjgvLy8vLy8vLy8vLy8vMS8xLzEvMA==/1
+
+-------------------------------------------------------------------------------------------------------------------------
+
+4k1br/1K1p1n1r/2p2pN1/P2p1N2/2P3pP/5B2/P2P4/8 w - - bm Kc8; id "hard2016.49"; DBI 2
+http://immortalchess.net/forum/showthread.php?t=172&page=63
+
+-------------------------------------------------------------------------------------------------------------------------
+
+5nr1/2Pp2pk/3Pp1p1/4P1P1/6P1/5K2/8/7n w - - bm c8=N; id "hard2016.58" DBI 2
+2 different sources
+
+M.Judowitsch- Study 1976
+http://www.stmintz.com/ccc/index.php?id=159814
+
+Randviir 1974
+https://glarean-magazin.ch/2009/01/24/der-brillante-schachzug-24/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+study by Smyslov
+2b1rk2/5p2/p1P5/2p2P2/2p5/7B/P7/2KR4 w - - bm f6; id "arasan19.41"; c0 "study by Smyslov"; DBI 1
+http://kenta.blogspot.be/2009/12/fofvhzyk-chessbase-christmas-puzzles-in.html
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2b1r3/r2ppN2/8/1p1p1k2/pP1P4/2P3R1/PP3PP1/2K5 w - - bm Nd6+; id "hard2016.19"; DBI 2
+
+1 move from 2br4/r2pp3/8/1p1p1kN1/pP1P4/2P3R1/PP3PP1/2K5 w - - 0 1
+F. Simkovitch, 3.hm L'Italia Scacchistica 1923
+White to play and draw
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2bq1b2/1p3k2/1r1p1p1p/pNpP1PpP/P1P3P1/6B1/1P5Q/2K1R3 w - - bm Re6; id "ECM.396";
+
+Encyclopedia of Chess Middlegames pos 396
+http://www.stmintz.com/ccc/index.php?id=377824
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2r5/prkpR1p1/2p1ppK1/P1p1N1B1/P1P1P3/8/8/8 w - - bm Bf4; id "hard2016.36"; DBI 1
+
+[Event "2.hm tt22"]
+[White "Bondarenko, F KuznetsovAP"]
+[EventDate "1982
+
+http://rybkaforum.net/cgi-bin/rybkaforum/topic_show.pl?tid=10161
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6R1/8/2pB3k/2P4p/5p1q/5P2/4P1K1/8 w - - bm Bf8+; id "hard2016.64"; DBI 1
+
+A.A. Troitzky, "Deutsche Schachzeitung" 1907
+http://www.stmintz.com/ccc/index.php?id=49854
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6b1/5p2/1p3Bp1/1P3pP1/5P2/pp1B2K1/pr4P1/k7 w - - bm Kh2; id "hard2016.65"; DBI 1
+
+[Date "2011.??.??"]
+[Round "?"]
+[White "Rusz, Arpad"]
+
+http://rybkaforum.net/cgi-bin/rybkaforum/topic_show.pl?tid=23878
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6k1/p7/8/4B3/Pp3p1P/qP5P/P1Rb2K1/8 w - - bm Kf3; id "hard2016.68"; DBI 1
+
+Event "1.p Slovensko - Ukraina Pat a Mat"]
+[Date "2001
+[White "Salai, L."]
+http://www.talkchess.com/forum/viewtopic.php?start=0&t=45341
+
+-------------------------------------------------------------------------------------------------------------------------
+
+7q/b1p5/1p1Npkb1/pPP2ppP/P1P5/3B2P1/5P1R/K3R3 w - - bm hxg6; id "hard2016.74"; DBI 1
+
+Neghina, Mihai
+Euxinus Pontus (13/E4) 2010-07
+http://www.yacpdb.org/#search/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+8/5p2/N1p3p1/3pP1P1/7P/2kP4/Pb6/7K w - - bm h5; id "hard2016.85"; DBI 1
+
+??????, ?????? ??????????
+Wiener Schachzeitung 1912
+7th Prize
+
+http://www.yacpdb.org/#search/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+8/bp4Pk/4KB2/R6p/2pNp1P1/p7/3p1Pnq/2r5 w - - bm Nc6; id "hard2016.94"; DBI 1
+
+[Event "Die Schwalbe, Sc6"]
+[Date "2010"]
+[White "Bruch=W Minski=M Sonntag"]
+http://forum.computerschach.de/cgi-bin/mwf/topic_show.pl?tid=5210
+
+-------------------------------------------------------------------------------------------------------------------------
+
+q1r5/k3ppp1/2R5/PP1KP2r/2p4Q/2p1p3/5pP1/3R4 w - - bm Qd4+; id "hard2016.101"; DBI 1
+???
+http://immortalchess.net/forum/showthread.php?t=3358&page=8&langid=4
+
+-------------------------------------------------------------------------------------------------------------------------
+
+8/4K2p/6pr/5pk1/1pB2R2/p4PP1/8/8 w - - bm Rg4+; id "hard2016.83"; DBI 1
+
+Unclear :
+8/4K2p/6pr/5pk1/1pB2R2/p4PP1/8/8 w - - acd 13; bm Rg4+; ce 95; id "CCC-IV No.1";
+http://www.stmintz.com/ccc/index.php?id=191297
+
+
+Other Misc. Combinations
+http://www.ferz.be/fiche/problem.php?file=Misc&n=1823
+
+-------------------------------------------------------------------------------------------------------------------------[/quote]

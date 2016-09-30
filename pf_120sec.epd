@@ -1,21 +1,21 @@
 1b6/2p5/1kB5/1PN5/8/3K4/8/q7 w - - bm Nb3; id "hard2016.1"; DBI 2
 1r6/4k3/r2p2p1/2pR1p1p/2P1pP1P/pPK1P1P1/P7/1B6 b - - 0 48 bm Rxb3+; id "hard2016.10"; Brzozka-Bronstein, Miskolc 1963; DBI 2
-1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - bm Re8+; id "hard2016.14"; DBI 2
+1rb4k/p5np/3p1rp1/1ppB4/2N2P2/1P2R1P1/P1P4P/4R1K1 w - - 0 24 bm Re8+; id "hard2016.14"; Bagirov-Grigorian, URS 1976; DBI 2
 2b1r3/r2ppN2/8/1p1p1k2/pP1P4/2P3R1/PP3PP1/2K5 w - - bm Nd6+; id "hard2016.19"; DBI 2
 2r1r1k1/4bppp/1q4n1/3pP3/p1pP4/PnR2NBP/1P4P1/1B1QR2K w - - bm e6; id "hard2016.29"; DBI 2
 3k4/2pq3p/pp5R/4P3/P6P/2PN4/1PN3K1/8 w - - bm Nd4; id "hard2016.39"; DBI 2
 3k4/4pp2/n2n4/5BN1/3N4/b7/4K3/8 w - - bm Nxf7+; id "hard2016.40"; DBI 2
-4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; c0 "study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011-12"; DBI 2
+4K1k1/8/1p5p/1Pp3b1/8/1P3P2/P1B2P2/8 w - - bm f4; id "arasan19.189"; Study by Ladislav Salai Jr, 1st Prize in Šachová skladba 2011; DBI 2
 4k1br/1K1p1n1r/2p2pN1/P2p1N2/2P3pP/5B2/P2P4/8 w - - bm Kc8; id "hard2016.49"; DBI 2
-4q1kr/p6p/1prQPppB/4n3/4P3/2P5/PP2B2P/R5K1 w - - 1 24 bm Qxe5; id "gusev"; c0 "Gusev-Auerbach, Chelyabinsk, 1946"; DBI 2
+4q1kr/p6p/1prQPppB/4n3/4P3/2P5/PP2B2P/R5K1 w - - 1 24 bm Qxe5; id "gusev"; Gusev-Auerbach, Chelyabinsk, 1946; DBI 2
 5nr1/2Pp2pk/3Pp1p1/4P1P1/6P1/5K2/8/7n w - - bm c8=N; id "hard2016.58" DBI 2
-8/1p2b3/6k1/5p2/p2NbP1p/P1B1P1p1/1P5P/6K1 w - - 0 47 bm h3; id "hard2016.78"; c0 "Smirin-HIARCS 8, 2002"; DBI 2
-8/3P3k/n2K3p/2p3n1/1b4N1/2p1p1P1/8/3B4 w - - bm Nf6+; id "hard2016.82"; c0 "study by Van Breukelen"; DBI 2
-r5k1/p1pb2bp/3p3r/P1pPp1p1/2B1Pq2/1R2QPp1/1P4PP/5RBK b - - 3 28 bm Rxh2+; id "hard2016.144"; c0 "Summerscale-Jones, Torquay 2009";DBI 2
+8/1p2b3/6k1/5p2/p2NbP1p/P1B1P1p1/1P5P/6K1 w - - 0 47 bm h3; id "hard2016.78"; Smirin-HIARCS 8, 2002; DBI 2
+8/3P3k/n2K3p/2p3n1/1b4N1/2p1p1P1/8/3B4 w - - bm Nf6+; id "hard2016.82"; Study by Van Breukelen"; DBI 2
+r5k1/p1pb2bp/3p3r/P1pPp1p1/2B1Pq2/1R2QPp1/1P4PP/5RBK b - - 3 28 bm Rxh2+; id "hard2016.144"; Summerscale-Jones, Torquay 2009; DBI 2
 
 1rb2r1k/3p1pp1/p3p2p/1p2P3/4q3/1N2B1R1/PPP1N1P1/2KR1B2 w - - bm Nf4; id "hard2016.13"; DBI 1
-2b1rk2/5p2/p1P5/2p2P2/2p5/7B/P7/2KR4 w - - bm f6; id "arasan19.41"; c0 "study by Smyslov"; DBI 1
-2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; c0 "Gashimov-Azarov, FIDE World Cup 2011"; DBI 1
+2b1rk2/5p2/p1P5/2p2P2/2p5/7B/P7/2KR4 w - - bm f6; id "arasan19.41"; Study by Smyslov"; DBI 1
+2q2r1k/p1p1b1pp/br1p1n2/2p1N1BP/Q1P1P3/8/PP1N1PP1/2KR3R w - - 0 17 bm Ng6+; id "hard2016.27"; Gashimov-Azarov, FIDE World Cup 2011; DBI 1
 2r5/prkpR1p1/2p1ppK1/P1p1N1B1/P1P1P3/8/8/8 w - - bm Bf4; id "hard2016.36"; DBI 1
 6R1/8/2pB3k/2P4p/5p1q/5P2/4P1K1/8 w - - bm Bf8+; id "hard2016.64"; DBI 1
 6b1/5p2/1p3Bp1/1P3pP1/5P2/pp1B2K1/pr4P1/k7 w - - bm Kh2; id "hard2016.65"; DBI 1
@@ -24,9 +24,9 @@ r5k1/p1pb2bp/3p3r/P1pPp1p1/2B1Pq2/1R2QPp1/1P4PP/5RBK b - - 3 28 bm Rxh2+; id "ha
 8/5p2/N1p3p1/3pP1P1/7P/2kP4/Pb6/7K w - - bm h5; id "hard2016.85"; DBI 1
 8/bp4Pk/4KB2/R6p/2pNp1P1/p7/3p1Pnq/2r5 w - - bm Nc6; id "hard2016.94"; DBI 1
 q1r5/k3ppp1/2R5/PP1KP2r/2p4Q/2p1p3/5pP1/3R4 w - - bm Qd4+; id "hard2016.101"; DBI 1
-r1b2rk1/2q1bppp/p2pp3/2n3PQ/1p1BP3/1BN5/PPP2P1P/2KR2R1 w - - bm Bf6; id "hard2016.108"; DBI 1
-r1bqkb1r/ppp3pp/n3pn2/1N1p1p2/3P1B2/4P3/PPP2PPP/R2QKBNR w KQkq - 2 6 bm c4; id "hard2016.118"; c0 "Shtyrenkov-Krouzel, Komercni Bank 1996";DBI 1
-r2qrbk1/1b3p2/3p2pB/1p1P1N2/1np1P3/5NRP/1P3PP1/1B1Qn1K1 w - - bm N3h4; id "hard2016.129"; DBI 1
+r1b2rk1/2q1bppp/p2pp3/2n3PQ/1p1BP3/1BN5/PPP2P1P/2KR2R1 w - - 0 16 bm Bf6; id "hard2016.108"; Hennings-Moehring, Colditz 1967; DBI 1
+r1bqkb1r/ppp3pp/n3pn2/1N1p1p2/3P1B2/4P3/PPP2PPP/R2QKBNR w KQkq - 2 6 bm c4; id "hard2016.118"; Shtyrenkov-Krouzel, Komercni Bank 1996; DBI 1
+r2qrbk1/1b3p2/3p2pB/1p1P1N2/1np1P3/5NRP/1P3PP1/1B1Qn1K1 w - - bm N3h4; id "hard2016.129; DBI 1
 
 
 Failed Vincent verification
