@@ -1,0 +1,166 @@
+Use Sec per move          : 300 Sec per move
+  Analysis Lines            : Minimum search depth=12
+  Activate abort analysis   : True. Minimal analysis depth 24. Abort, if the correct move is held 3 additional ply
+
+    Solution                1st run                 2nd run               3rd run
+   ----------------------------------------------------------------------------------
+ 1) Nc5-b3                  Nc5-d7                  Nc5-d7                Nc5-d7
+ 2) Bb6-c7                  Bb6xd8                  Bb6xd8                Bb6xd8
+ 3) Nf3-h2, g2-g4           Ra1-e1                  Be3-d2                g2-g4   * 8 Sec
+ 4) Rd6xf6                  Qe5-d4                  Qe5-d4                Qe5-d4
+ 5) Bb1xh7                  Bb1xh7  * 2 Sec         Bb1xh7  * 3 Sec       Bb1xh7  * 2 Sec
+ 6) Rg1xg7                  Rd1-d4                  Rd1-d4                Rd1-d4
+ 7) Nf3-d4                  Nf3-d4  * 8 Sec         Nf3-d4  * 30 Sec      Nf3-d4  * 8 Sec
+ 8) Bd3xh7                  Rf1-h1                  Rf1-h1                Rf1-h1
+ 9) Ng3-f5                  Ng3-f5  * 243 Sec       Ng3-f5  * 266 Sec     Nd5-f6
+10) .. Rb8xb3, Kc3-c1       Ra6-a8                  Ra6-a7                Ke7-e6
+11) g2-g4                   g2-g4   * 2 Sec         g2-g4   * 4 Sec       g2-g4   * 2 Sec
+12) e4-e5                   e4-e5   * 64 Sec        e4-e5   * 68 Sec      e4-e5   * 98 Sec
+13) Ne2-f4                  Be3-a7                  Be3-a7                Be3-c5
+14) Re3-e8                  Nc4-d2                  Nc4-d2                Nc4-d2
+15) Be3xh6                  Be3xh6  * 206 Sec       Be3xh6  * 31 Sec      Be3xh6  * 170 Sec
+16) Rf1xf6                  Rf1xf6  * 140 Sec       Rf1xf6  * 37 Sec      Bd4-a7
+17) Rc8xc7                  Kg7-f7                  Kg7-f7                Kg7-f7
+18) e3-e4                   a2-a3                   a2-a3                 a2-a3
+19) Nf7-d6                  Nf7-h6                  Nf7-h6                Nf7-h6
+20) f5-f6                   c6-c7                   c6-c7                 c6-c7
+21) Rf2-f6                  Rf2-f6  * 168 Sec       Rf2-f6  * 66 Sec      Rf2-f6  * 5 Sec
+22) Re1-e6                  Re1-e6  * 257 Sec       b2-b3                 Re1-e6  * 80 Sec
+23) .. Rd6-f6               Rd6-d7                  Rd6-f6  * 296 Sec     Rd6-d7
+24) Kh3-g2                  Kh3-g2  * 14 Sec        Kh3-g2  * 100 Sec     Kh3-g2  * 3 Sec
+25) .. h5-h4                h5-h4   * 0 Sec         h5-h4   * 0 Sec       h5-h4   * 0 Sec
+26) c4-c5                   Kd3-e3                  Bf2-e1                Bf2-e3
+27) Ne5-g6                  Ne5-d3                  Ne5-d3                Ne5-d3
+28) Qc6-f3                  Qc6-f3  * 133 Sec       Qc6-f3  * 62 Sec      Rc5-c1
+29) e5-e6                   Bb1-f5                  Bb1-f5                Bb1-f5
+30) Bd3xh7                  Bd3xh7  * 211 Sec       Bd3xh7  * 206 Sec     Qd4xc5
+31) Kh2-g3                  Qf6-f4                  Qf6-f4                Qf6-f4
+32) Rf1-f5                  Rf1-f5  * 52 Sec        Rf1-f5  * 111 Sec     Rf1-f5  * 117 Sec
+33) Be3xc5                  Be3xc5  * 10 Sec        Be3xc5  * 43 Sec      Be3xc5  * 12 Sec
+34) Rd1-g1                  Rd1-g1  * 19 Sec        Rd1-g1  * 30 Sec      Rd1-g1  * 29 Sec
+35) Bd5xf7                  Bd5xf7  * 27 Sec        Bd5xf7  * 13 Sec      Bd5xf7  * 24 Sec
+36) Bg5-f4                  Re7xd7                  Bg5xf6                Bg5xf6
+37) Bc2-a4                  c3-c4                   e5xf6                 c3-c4
+38) Qd8-a8                  Qd8-f6                  Qd8-f8                Qd8-f8
+39) Nc2-d4                  Kg2-f3                  Kg2-f3                Kg2-f3
+40) Ng5xf7                  Bf5-b1                  Bf5-c2                Bf5-c2
+41) .. Bg7xd4               Bg7xd4  * 4 Sec         Bg7xd4  * 33 Sec      Bg7xd4  * 9 Sec
+42) b2-b4                   Bd4-g1                  Bd4-g1                Bd4-g1
+43) c2-c4                   c2-c4   * 30 Sec        c2-c4   * 23 Sec      c2-c4   * 37 Sec
+44) Rg3-g5                  Rg3-h3                  Rg3-h3                Rg3-h3
+45) Qh3xh5                  Qh3xh5  * 14 Sec        Qh3xh5  * 13 Sec      Qh3xh5  * 6 Sec
+46) f3-f4                   Ke8-d7                  Ke8-d7                Ke8-d7
+47) Re8xe5                  Re8-c8                  Re8-e7                Re8-c8
+48) .. e6-e5, c3xc1         Nd7-f6                  Nd7-f6                Qe7-d8
+49) Kb7-c8                  a5-a6                   a5-a6                 a5-a6
+50) f5xe6                   f5xe6   * 87 Sec        f5xe6   * 128 Sec     Qf3-c3
+51) Kh7-h6                  Kh7-h6  * 43 Sec        Kh7-h6  * 58 Sec      Kh7-h6  * 26 Sec
+52) Qd6xe5                  Qd6-a3                  Qd6-a3                Qd6-a3
+53) Ne4xf6                  Ne4xf6  * 25 Sec        Ne4xf6  * 21 Sec      Ne4xf6  * 2 Sec
+54) Qe2-h5                  Qe2-h5  * 104 Sec       Qe2-h5  * 16 Sec      Qe2-h5  * 50 Sec
+55) Ng7-f5                  Ng7-f5  * 38 Sec        Ng7-f5  * 54 Sec      Ng7-f5  * 28 Sec
+56) .. Rc2xf2               Rc2xf2  * 109 Sec       Be7-c5                Rc2xf2  * 200 Sec
+57) Rd3xb3                  Rd3-e3                  Rd3-e3                Rd3-e3
+58) c7-c8N                  Kf3-g2                  Kf3-g2                Kf3-g2
+59) Qf5-e6                  Rf7xc7                  Rf7xc7                Rf7xc7
+60) Rh5xg5                  Rh5xg5  * 57 Sec        Rh5xg5  * 19 Sec      Rh5xg5  * 44 Sec
+61) .. Qd7-h3               Qd7-h3  * 28 Sec        Qd7-h3  * 25 Sec      Qd7-h3  * 13 Sec
+62) .. Re2xd2               Re2xg2                  Re2xg2                Re2xg2
+63) e4-e5                   b3-b4                   e4-e5   * 283 Sec     e4-e5   * 262 Sec
+64) Bd6-f8                  Rg8-f8                  Kg2-f1                Rg8-f8
+65) Kg3-h2                  Kg3-f3                  Kg3-f3                Kg3-f3
+66) Be3xc5                  Kb7-b6                  Kb7-b6                Re5-e8
+67) Bg2xe4                  Bg2xe4  * 98 Sec        Bg2xe4  * 75 Sec      Bg2xe4  * 70 Sec
+68) Kg2-f3                  Rc2xd2                  Rc2xd2                Rc2xd2
+69) Nc3-d5                  Nc3-d5  * 47 Sec        Nc3-d5  * 89 Sec      Nc3-d5  * 78 Sec
+70) b3-b4                   b3-b4   * 26 Sec        b3-b4   * 53 Sec      b3-b4   * 26 Sec
+71) Qd3xg6                  Qd3xg6  * 109 Sec       h4-h5                 h4-h5
+72) .. Re3xf3               Rf6-h6                  Rf6-h6                Rf6-h6
+73) Kh4-h5                  Qf2xf3                  Qf2xf3                Qf2xf3
+74) h5xg6                   Nd6-b7                  Nd6-b7                Nd6-b7
+75) Kg1-h2                  Kg1-h2  * 3 Sec         Kg1-h2  * 9 Sec       Kg1-h2  * 4 Sec
+76) .. Rd7xd4, Kc3-c1       Rd7xd4  * 60 Sec        Rd7xd4  * 215 Sec     Rd7xd4  * 31 Sec
+77) Bh3-f5                  Bh3-f5  * 45 Sec        Rc3-f3                Bh3-f5  * 234 Sec
+78) h2-h3                   Bc3-e1                  Bc3-e1                Bc3-e1
+79) Be2-h5                  Nh3xf2                  Nh3xf2                Nh3xf2
+80) Bc4-e2                  Bc4-f1                  Bc4-f1                Bc4-f1
+81) f7-f8Q                  f7-f8Q  * 201 Sec       f7-f8Q  * 256 Sec     f7-f8Q  * 137 Sec
+82) Ng4-f6                  Ng4xe3                  Ng4xe3                Ng4xe3
+83) Rf4-g4                  Rf4-g4  * 203 Sec       Bc4-d5                Rf4-g4  * 112 Sec
+84) Nf4-d3                  h4xg5                   h4xg5                 h4xg5
+85) h4-h5                   e5-e6                   Kh1-g2                e5-e6
+86) c3-c4                   Qd2-h6                  c3-c4   * 143 Sec     c3-c4   * 288 Sec
+87) Na5-b3                  Nd4xc2                  Nd4xc2                Nd4xc2
+88) Be3-c1                  Be3-c1  * 0 Sec         Be3-c1  * 0 Sec       Be3-c1  * 130 Sec
+89) .. g6-g5, d5-d4         g6-g5   * 29 Sec        g6-g5   * 6 Sec       d5-d4   * 9 Sec
+90) .. Bf5-h3, Bc3-c1       a4-a3                   a4-a3                 a4-a3
+91) Rf1-b1                  Rf1-c1                  Rf1-c1                Rf1-b1  * 1 Sec
+92) g3-g4                   g3-g4   * 106 Sec       Bf2-d4                Bf2-d4
+93) g4-g5                   g4-g5   * 3 Sec         g4-g5   * 14 Sec      g4-g5   * 120 Sec
+94) Nd4-c6                  g7-g8B                  g7-g8Q                g7-g8Q
+95) Re5xf5                  Re2-d2                  Re2-d2                Re2-d2
+96) f2-f4                   Na8-c7                  Na8-c7                Na8-c7
+97) .. d3-d2                Qd4-e3                  d3-d2   * 0 Sec       d3-d2   * 1 Sec
+98) Bh5-f3                  Nc3-b5                  Nc3-b5                Nc3-b5
+99) Rh1-h6                  Bf7-e8                  Bf7-e8                Bf7-e8
+100) Bd8-c7                  g6xh7                   g6xh7                 g6xh7
+101) Qh4-d4                  Qh4xe7                  Qh4xe7                Qh4xe7
+102) .. Ne8-c7               Ne8-c7  * 95 Sec        Ne8-c7  * 51 Sec      Ne8-c7  * 51 Sec
+103) c4-c5                   c4-c5   * 219 Sec       b4-b5                 b4-b5
+104) Bf1-e2                  g2-g3                   g2-g3                 g2-g3
+105) Bg5-f6                  Bg5-f6  * 3 Sec         Bg5-f6  * 31 Sec      Bg5-f6  * 3 Sec
+106) Be4-g6                  Be4-g6  * 242 Sec       Be4-d3                Be4-d3
+107) Bd3xh7                  Rf1-f3                  Bd3xh7  * 209 Sec     Bd3xh7  * 215 Sec
+108) Bd4-f6                  Qh5-h6                  Qh5-h6                Qh5-h6
+109) Bd3-g6                  Nc3-b5                  Nc3-b5                Rf1-f3
+110) Re1-e5                  c3-c4                   c3-c4                 c3-c4
+111) Kg1-f2, ...             Kg1-f2  * 16 Sec        Kg1-f2  * 73 Sec      Kg1-f2  * 41 Sec
+112) Bd3xh7                  Bd3xh7  * 13 Sec        Nd2-f3                Bd3xh7  * 41 Sec
+113) .. Nb6-c4, Bc3xc1       a7-a5                   a7-a5                 a7-a5
+114) Qe1-h4                  Qe1-h4  * 24 Sec        Qe1-h4  * 46 Sec      Qe1-h4  * 151 Sec
+115) Ne4-g5                  g2-g4                   Kc1-b1                g2-g4
+116) Bd3xh7                  Bd3xh7  * 8 Sec         Bd3xh7  * 32 Sec      Bd3xh7  * 73 Sec
+117) .. Bg7-h6, Nc3-c1       Qd8-e8                  Qd8-e8                Qd8-e8
+118) c2-c4                   Ng1-f3                  Ng1-f3                Ng1-f3
+119) Rh1xh7                  Rh1xh7  * 21 Sec        Rh1xh7  * 8 Sec       Rh1xh7  * 5 Sec
+120) Qe2xe8                  Bd4xf6                  Bd4xf6                Bd4xf6
+121) Nd5-f6                  Nd5-f6  * 77 Sec        Rf1-d1                h2-h3
+122) f5-f6                   Kg1-h1                  Kg1-h1                Kg1-h1
+123) Nd4-f5                  Nd4-f5  * 10 Sec        Nd4-f5  * 14 Sec      Nd4-f5  * 69 Sec
+124) Qf3-f6                  Qf3-f6  * 178 Sec       b3xa4                 b3xa4
+125) Qf3-f6                  Qf3-f6  * 117 Sec       Qf3-f6  * 170 Sec     Qf3-f6  * 55 Sec
+126) Qg5-h6                  Qg5-h6  * 163 Sec       Qg5-h6  * 284 Sec     O-O-O
+127) Nf3xg5                  Nf3xg5  * 11 Sec        Nf3xg5  * 23 Sec      Nf3xg5  * 25 Sec
+128) Nd4-c6                  Nd4-c6  * 181 Sec       Nd4-c6  * 118 Sec     Nd4-c6  * 70 Sec
+129) Nf3-h4                  Qd1xe1                  Qd1xe1                Qd1xe1
+130) .. Rd8xd4               Rd8xd4  * 256 Sec       Rd8xd4  * 143 Sec     Rd8xd4  * 115 Sec
+131) Bg7xh6                  Bg7xh6  * 41 Sec        Bg7xh6  * 26 Sec      Bg7xh6  * 29 Sec
+132) g2-g4                   g2-g4   * 20 Sec        g2-g4   * 80 Sec      g2-g4   * 12 Sec
+133) .. Kg8-g7               e4xd3                   e4xd3                 e4xd3
+134) Rf3-f6                  Rf3-f6  * 83 Sec        Rf3-f6  * 162 Sec     Rf3-f6  * 61 Sec
+135) Bd3xh7                  Bd3xh7  * 38 Sec        Bd3xh7  * 6 Sec       Bd3xh7  * 129 Sec
+136) Rd3-h3                  Rd3-h3  * 195 Sec       Rd3-h3  * 74 Sec      Rd3-h3  * 143 Sec
+137) Rd2-d1                  Rd2-d1  * 0 Sec         Rd2-d1  * 28 Sec      Rd2-d1  * 160 Sec
+138) Rd6xf6                  Rd6xf6  * 37 Sec        Rg1-g2                Rd6xf6  * 121 Sec
+139) Qe2-h5                  Bd5xc6                  Bd5xc6                Qe2-h5  * 232 Sec
+140) Bd3xh7                  Bd4xc5                  Bd3xh7  * 78 Sec      Bd3xh7  * 231 Sec
+141) Bg5-f6                  Bg5-f6  * 6 Sec         Bg5-f6  * 40 Sec      Bg5-f6  * 5 Sec
+142) .. c3xb2, c3xc1         c3xb2   * 73 Sec        c3xb2   * 58 Sec      c3xb2   * 35 Sec
+143) .. e4-e3                e4-e3   * 184 Sec       Ra8-f8                Ra8-f8
+144) .. Rh6xh2               a7-a6                   a7-a6                 a7-a6
+145) Qd2-f4                  Qd2-f4  * 10 Sec        Qd2-f4  * 35 Sec      Qd2-f4  * 107 Sec
+146) Nc3-d5                  Qd2-e3                  Qd2-e3                Qd2-e3
+147) .. Bd7-h3               Bd7-h3  * 3 Sec         Bd7-h3  * 68 Sec      Bd7-h3  * 118 Sec
+148) .. Qb2-c2, c3-c1        e3xd2                   e3xd2                 Qb2-c2  * 175 Sec
+149) g2-g4                   g2-g4   * 35 Sec        g2-g4   * 155 Sec     g2-g4   * 57 Sec
+150) Bd3xh7                  Ra1-c1                  Ra1-c1                Ra1-c1
+151) e5-e6                   e5-e6   * 67 Sec        e5-e6   * 70 Sec      e5-e6   * 30 Sec
+152) h3-h4                   h3-h4   * 9 Sec         h3-h4   * 0 Sec       h3-h4   * 0 Sec
+153) Na4xb6(?)               Na4xb6                  Na4xb6                Na4xb6
+154) .. Rc5-b5(?)            Rc5-b5                  Rc5-b5                Rc5-b5
+155)                         f5-f6   * 0 Sec         Kh5-h6  * 0 Sec       f5-f6   * 0 Sec
+156) ..                      Kf6-e5  * 0 Sec         Kf6-e5  * 0 Sec       Kf6-e5  * 0 Sec
+157) Bf5-g4                  Bf5-g4  * 0 Sec         Bf5-g4  * 0 Sec       Bf5-g4  * 0 Sec
+158) ..                      Ke8-f8                  Ke8-f8                Ke8-f8
+159) Kc6-d5, Bc4-d5          Kc6-d7                  Kc6-d7                Bc4-a2
+160) Bf4-e3, Bf4-d2, Bf4     Bf4-e3  * 3 Sec         Bf4-e3  * 7 Sec       Kh7-h6
