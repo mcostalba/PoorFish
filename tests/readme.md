@@ -17,3 +17,7 @@ DBT stands for "Double Blind Test" where a normal search is first performed to
 get a baseline score, then, if the best move is still not found, the best move
 is forced and the position researched, if after the second search the score is
 still lower than the former baseline, then the test is considered passed.
+
+Source Test suite
+
+https://github.com/zd3nik/Clubfoot/tree/master/epd
