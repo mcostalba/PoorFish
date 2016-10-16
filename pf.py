@@ -13,18 +13,21 @@ test_epd = 'C:\Users\marco\Documents\programmi\stockfish\src\hard2016beta6.epd'
 
 def read_epd(file):
     epd = []
+    cnt = 0
     with open(file, 'r') as f:
         for line in f:
             epd.append(line)
-    return epd
+            if line.strip():
+                cnt += 1
+    return epd, cnt
 
-def run_stockfish(sf_path, fen, time, hash=1024, threads=3):
+def run(engine, fen, time, hash=1024, threads=3):
     cmd = ['setoption name Hash value ' + str(hash),
            'setoption name Threads value ' + str(threads),
            'position fen ' + fen,
            'go movetime ' + str(time)]
 
-    p = Popen(sf_path, stdout=PIPE, stdin=PIPE, universal_newlines=True, close_fds=ON_POSIX)
+    p = Popen(engine, stdout=PIPE, stdin=PIPE, universal_newlines=True, close_fds=ON_POSIX)
     p.stdin.write('\n'.join(cmd) + '\n') # Note the trailing '\n'
     line = ''
     while 'bestmove' not in line:
@@ -72,22 +75,25 @@ def compare(score1, score2):
         return False
     score1 = score1.split('cp')[1].strip()
     score2 = score2.split('cp')[1].strip()
-    return int(score1) > int(score2)
+    return int(score1) > -int(score2)
 
-def run_session(engine, testsuite, time_per_move, result_epd):
-    epd = read_epd(testsuite)
+def run_session(engine, test_epd, time_per_move, result_epd):
+    epd, total = read_epd(test_epd)
+    cnt = 0
     open(result_epd, 'w').close()
     for i in range(1, len(epd)):
         pos = epd[i-1].strip()
         (fen, san, new_fen, result) = parse_position(pos)
         if result == 'skip line':
+            append_result(result_epd, '\n')
             continue
-        print("Position: {}/{}\nPos: {}".format(i, len(epd), pos))
+        cnt += 1
+        print("Position: {}/{}\nPos: {}".format(cnt, total, pos))
         if result != 'OK':
             print(result)
             append_result(result_epd, pos + '\n')
             continue
-        (bestmove, score1) = run_stockfish(engine, fen, time=time_per_move)
+        (bestmove, score1) = run(engine, fen, time_per_move)
         board = chess.Board(fen)
         bestmove = board.san(chess.Move.from_uci(bestmove))
         print("Warm-up best move: {}, score: {}".format(bestmove, score1))
@@ -96,7 +102,7 @@ def run_session(engine, testsuite, time_per_move, result_epd):
             append_result(result_epd, '\n')
             continue
         print("Forcing best move: {}".format(san))
-        (bestmove, score2) = run_stockfish(engine, new_fen, time=time_per_move)
+        (bestmove, score2) = run(engine, new_fen, time_per_move)
         print("After forcing best move, score: {}\n\n".format(score2))
         if compare(score1, score2):
             append_result(result_epd, pos + '\n')
