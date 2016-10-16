@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import argparse
 import chess
+import os
 import sys
 from subprocess import Popen, PIPE
 
@@ -72,7 +74,8 @@ def compare(score1, score2):
     score2 = score2.split('cp')[1].strip()
     return int(score1) > int(score2)
 
-def run_session(engine, epd, time_per_move, result_epd):
+def run_session(engine, testsuite, time_per_move, result_epd):
+    epd = read_epd(testsuite)
     open(result_epd, 'w').close()
     for i in range(1, len(epd)):
         pos = epd[i-1].strip()
@@ -100,7 +103,29 @@ def run_session(engine, epd, time_per_move, result_epd):
         else:
             append_result(result_epd, '\n')
 
-movetime = 2000
-result_epd = test_epd.split('.epd')[0] + '_' + str(movetime / 1000) + 'sec.epd'
-epd = read_epd(test_epd)
-run_session(sf, epd, movetime, result_epd)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Run DBT test on a epd testsuite')
+    parser.add_argument("engine", help="Path to the chess engine")
+    parser.add_argument("testsuite", help="Path to the epd testsuite file")
+    parser.add_argument("movetime", help="Time for each position in milliseconds", type=int)
+    args = parser.parse_args()
+    engine = args.engine
+    tesuite = args.testsuite
+    movetime = args.movetime
+
+    if not os.path.isfile(engine):
+        print("Engine {} not found.".format(engine))
+        sys.exit(0)
+
+    if not os.path.isfile(tesuite):
+        print("Testsuite {} not found.".format(testsuite))
+        sys.exit(0)
+
+    result_epd = tesuite.split('.epd')[0]
+    result_epd += '_' + str(movetime / 1000) + 'sec.epd'
+
+    print("Running DBT on {}, successful positions will be written \ninto {},"
+          "preserving line number.\nEach position will be searched for "
+          "{} milliseconds.\n".format(tesuite, result_epd, movetime))
+
+    run_session(engine, tesuite, movetime, result_epd)
