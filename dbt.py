@@ -8,15 +8,17 @@ from subprocess import Popen, PIPE
 
 ON_POSIX = 'posix' in sys.builtin_module_names
 
+
 def read_epd(file):
     epd = []
-    cnt = 0
+    total = 0
     with open(file, 'r') as f:
         for line in f:
             epd.append(line)
             if line.strip():
-                cnt += 1
-    return epd, cnt
+                total += 1
+    return epd, total
+
 
 def run(args, fen):
     cmd = ['setoption name Hash value ' + str(args.hash),
@@ -24,7 +26,7 @@ def run(args, fen):
            'position fen ' + fen,
            'go movetime ' + str(args.movetime)]
     p = args.process
-    p.stdin.write('\n'.join(cmd) + '\n') # Note the trailing '\n'
+    p.stdin.write('\n'.join(cmd) + '\n')  # Note the trailing '\n'
     line = ''
     while 'bestmove' not in line:
         line = p.stdout.readline()
@@ -33,36 +35,38 @@ def run(args, fen):
     bestMove = line.split('bestmove')[1].strip().split(' ')[0]
     return bestMove, score
 
+
 def parse_position(line):
     pos = line.split('bm')
-    if len(pos) < 2: # Catch empty or invalid line
+    if len(pos) < 2:  # Catch empty or invalid line
         return '', '', '', 'skip line'
     (fen, san) = pos
     f = fen.split()
-    attempts = [fen, ' '.join(f[:6]), ' '.join(f[:4]) + ' 0 1'] # Be forgiving on the fen format
-    for fen in attempts:
+    attempts = [fen, ' '.join(f[:6]), ' '.join(f[:4]) + ' 0 1']
+    for fen in attempts:  # Be forgiving on the fen format
         try:
             board = chess.Board(fen)
             break
         except:
-            if fen == attempts[-1]: # At the end
+            if fen == attempts[-1]:  # At the end
                 return '', '', '', "Invalid fen\n\n".format(attempts[0])
     san = san.split(';')[0]
     san = san.replace(',', ' ').replace('!', ' ').split()[0]
-    attempts = [san, san + '+'] # Be forgiving on the san format
-    for san in attempts:
+    attempts = [san, san + '+']
+    for san in attempts:  # Be forgiving on the san format
         try:
             board.push_san(san)
             break
         except:
-            if san == attempts[-1]: # At the end
+            if san == attempts[-1]:  # At the end
                 return '', '', '', "Invalid best move: {}\n\n".format(attempts[0])
-
     return fen, san, board.fen(), 'OK'
+
 
 def append_result(result_epd, line):
     with open(result_epd, 'a') as f:
         f.write(line)
+
 
 def compare(score1, score2):
     if 'mate' in score1 or 'mate' in score2:
@@ -71,13 +75,14 @@ def compare(score1, score2):
     score2 = score2.split('cp')[1].strip()
     return int(score1) > -int(score2)
 
+
 def run_session(args):
-    open(args.result_epd, 'w').close() # Clear output file
+    open(args.result_epd, 'w').close()  # Clear output file
     epd, total = read_epd(args.testsuite)
     args.process = Popen(args.engine, stdout=PIPE, stdin=PIPE, universal_newlines=True, close_fds=ON_POSIX)
     cnt = 0
-    for i in range(1, len(epd)):
-        pos = epd[i-1].strip()
+    for pos in epd:
+        pos = pos.strip()
         (fen, san, new_fen, result) = parse_position(pos)
         if result == 'skip line':
             append_result(args.result_epd, '\n')
@@ -103,8 +108,9 @@ def run_session(args):
             append_result(args.result_epd, pos + '\n')
         else:
             append_result(args.result_epd, '\n')
-    args.process.stdin.close() # Make the engine to quit
+    args.process.stdin.close()  # Make the engine to quit
     args.process.wait()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run DBT test on a epd testsuite')
