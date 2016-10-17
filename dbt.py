@@ -142,8 +142,8 @@ def run_session(args):
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description='Run DBT test on a epd testsuite')
     p.add_argument("engine", help="Path to the chess engine")
-    p.add_argument("testsuite", help="Path to the epd testsuite file")
-    p.add_argument("movetime", help="Time for position in milliseconds", type=int)
+    p.add_argument("testsuite", help="Path to the epd input file")
+    p.add_argument("--movetime", help="Time for position in milliseconds", type=int, default=10000)
     p.add_argument("--threads", help="Number of threads", type=int, default=3)
     p.add_argument("--hash", help="Hash table size in MB", type=int, default=1024)
     args = p.parse_args()
