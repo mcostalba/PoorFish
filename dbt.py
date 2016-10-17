@@ -31,7 +31,7 @@ def run(args, fen):
     p.stdin.write('\n'.join(cmd) + '\n')  # Note the trailing '\n'
     line = ''
     while 'bestmove' not in line:
-        line = p.stdout.readline()
+        line = p.stdout.readline()  # Blocking call
         if 'score' in line:
             score = line.split('score ')[-1].split(' nodes')[0].strip()
 
@@ -49,9 +49,14 @@ def try_until_ok(attempts, f):
 
 
 def parse_position(line):
-    pos = line.split('bm')
-    if len(pos) < 2:  # Catch empty or invalid line
-        return None, None, 'skip line'
+    """Get fen and best move in san notation out of a line. It is quite robust
+       to incomplete fen and especially to malformed best moves."""
+    if not line.strip():
+        return None, None, 'Empty line'  # This is allowed, is not an error
+
+    pos = line.split('bm' if 'bm' in line else 'am')  # Sometime 'am' is used
+    if len(pos) < 2:
+        return None, None, "Invalid line {}\n\n".format(line)
 
     (fen, san) = pos
     f = fen.split()
@@ -70,12 +75,14 @@ def parse_position(line):
     return board, board.san(move), 'OK'
 
 
-class ResultWriter(object):
+class EpdWriter(object):
+    """Syntactic sugar class to append into the output epd file the successful
+       positions that passed the test."""
     def __init__(self, result_epd):
         self.result_epd = result_epd
         open(result_epd, 'w').close()  # Clear output file
 
-    def __call__(self, pos = ''):
+    def __call__(self, pos=''):
         with open(self.result_epd, 'a') as f:
             f.write(pos + '\n')
 
@@ -86,11 +93,16 @@ def compare(score1, score2):
 
     score1 = score1.split('cp')[1].strip()
     score2 = score2.split('cp')[1].strip()
-    return int(score1) > -int(score2)
+    return int(score1) > -int(score2)  # Note that sign is inverted for score2
 
 
 def run_session(args):
-    append = ResultWriter(args.result_epd)
+    """Main function that reads the epd testsuite and runs the engine on each
+       position. Engine is first ran once, if best move is still not found then
+       the provided best move is forced and the new position is researched:
+       if the score of the second search is still lower than the first one (our
+       baseline), then the position is very hard and test succeeded."""
+    print_epd = EpdWriter(args.result_epd)
     epd, total = read_epd(args.testsuite)
     args.process = Popen(args.engine, stdout=PIPE, stdin=PIPE,
                          universal_newlines=True, close_fds=ON_POSIX)
@@ -98,15 +110,15 @@ def run_session(args):
     for pos in epd:
         pos = pos.strip()
         (board, san, result) = parse_position(pos)
-        if result == 'skip line':
-            append()
+        if result == 'Empty line':
+            print_epd()
             continue
 
         cnt += 1
         print("Position: {}/{}\nPos: {}".format(cnt, total, pos))
         if result != 'OK':
             print(result)
-            append(pos)
+            print_epd(pos)  # Don't silently drop invalid positions
             continue
 
         (bestmove, score1) = run(args, board.fen())
@@ -114,14 +126,14 @@ def run_session(args):
         print("Warm-up best move: {}, score: {}".format(bestmove, score1))
         if bestmove == san:
             print("Best move already found!\n\n")
-            append()
+            print_epd()
             continue
 
         print("Forcing best move: {}".format(san))
         board.push_san(san)
         (bestmove, score2) = run(args, board.fen())
         print("After forcing best move, score: {}\n\n".format(score2))
-        append(pos if compare(score1, score2) else '')
+        print_epd(pos if compare(score1, score2) else '')
 
     args.process.stdin.close()  # Make the engine to quit
     args.process.wait()
@@ -149,7 +161,7 @@ if __name__ == "__main__":
 
     print("Running DBT on {}, successful positions will be written \ninto {}, "
           "preserving line number. Each position will \nbe searched for "
-          "{} milliseconds.\n"
+          "{} milliseconds.\n\n"
           .format(args.testsuite, args.result_epd, args.movetime))
 
     run_session(args)
