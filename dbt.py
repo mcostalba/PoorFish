@@ -5,70 +5,55 @@ from __future__ import print_function
 import argparse
 import os
 import sys
-from subprocess import Popen, PIPE
 import chess
-
-ON_POSIX = 'posix' in sys.builtin_module_names
+import chess.uci
 
 
 def read_epd(fname):
+    """Read epd file preserving empty lines so that in the output epd, the line
+       number of the original position is preserved."""
     epd = []
     total = 0
     with open(fname, 'r') as f:
         for line in f:
+            line = line.strip()
             epd.append(line)
-            if line.strip():
+            if line:
                 total += 1
     return epd, total
 
 
-def run(args, fen):
-    cmd = ['setoption name Hash value ' + str(args.hash),
-           'setoption name Threads value ' + str(args.threads),
-           'position fen ' + fen,
-           'go movetime ' + str(args.movetime)]
-    p = args.process
-    p.stdin.write('\n'.join(cmd) + '\n')  # Note the trailing '\n'
-    line = ''
-    while 'bestmove' not in line:
-        line = p.stdout.readline()  # Blocking call
-        if 'score' in line:
-            score = line.split('score ')[-1].split(' nodes')[0].strip()
-
-    bestMove = line.split('bestmove')[1].strip().split(' ')[0]
-    return bestMove, score
-
-
-def try_until_ok(attempts, f):
-    for item in attempts:
+def try_call(func, arglist):
+    """Call func(arg) for each arg in arglist until no exception araises"""
+    for arg in arglist:
         try:
-            return f(item)
+            return func(arg)
         except:
-            if item == attempts[-1]:  # At the end
+            if arg == arglist[-1]:  # At the end
                 return None
 
 
 def parse_position(line):
     """Get fen and best move in san notation out of a line. It is quite robust
-       to incomplete fen and especially to malformed best moves."""
-    if not line.strip():
-        return None, None, 'Empty line'  # This is allowed, is not an error
+       to incomplete fen and especially to malformed best moves. We assume the
+       checking for empty line is already done upstream."""
 
-    pos = line.split('bm' if 'bm' in line else 'am')  # Sometime 'am' is used
-    if len(pos) < 2:
+    # Now find the best move delimiter, it should be 'bm' but...
+    sep = next((x for x in ['bm', 'am'] if x in line), None)
+    if not sep:
         return None, None, "Invalid line {}\n\n".format(line)
 
-    (fen, san) = pos
+    fen, san = line.split(sep)[:2]
     f = fen.split()
-    attempts = [fen, ' '.join(f[:6]), ' '.join(f[:4]) + ' 0 1']
-    board = try_until_ok(attempts, chess.Board)
+    arglist = [fen, ' '.join(f[:6]), ' '.join(f[:4]) + ' 0 1']
+    board = try_call(chess.Board, arglist)
     if not board:
         return None, None, "Invalid fen {}\n\n".format(fen)
 
     san = san.replace(';', ' ').replace(',', ' ').replace('!', ' ').split()[0]
     san = san.replace('0-0-0', 'O-O-O').replace('0-0', 'O-O')
-    attempts = [san, san + '+']
-    move = try_until_ok(attempts, board.parse_san)
+    arglist = [san, san + '+']
+    move = try_call(board.parse_san, arglist)
     if not move:
         return None, None, "Invalid best move {}\n\n".format(san)
 
@@ -87,16 +72,27 @@ class EpdWriter(object):
             f.write(pos + '\n')
 
 
-def compare(score1, score2):
-    if 'mate' in score1 or 'mate' in score2:
-        return False
+def prepare_engine(args):
+    """Launch the engine and set hash size (in MB) and number of threads"""
+    engine = chess.uci.popen_engine(args.engine)
+    info_handler = chess.uci.InfoHandler()
+    engine.info_handlers.append(info_handler)
+    engine.uci()  # Send the mandatory uci command
+    engine.setoption({"Hash": args.hash, "Threads": args.threads})
+    if not engine.is_alive():
+        engine.quit()
+        return None
+    return engine
 
-    score1 = score1.split('cp')[1].strip()
-    score2 = score2.split('cp')[1].strip()
-    return int(score1) > -int(score2)  # Note that sign is inverted for score2
+
+def pretty(score):
+    """Return a printable string out of a chess.uci.Score"""
+    if score.mate:
+        return str(score.mate) + '#'
+    return str(score.cp)
 
 
-def run_session(args):
+def run_session(args, engine):
     """Main function that reads the epd testsuite and runs the engine on each
        position. Engine is first ran once, if best move is still not found then
        the provided best move is forced and the new position is researched:
@@ -104,26 +100,25 @@ def run_session(args):
        baseline), then the position is very hard and test succeeded."""
     print_epd = EpdWriter(args.result_epd)
     epd, total = read_epd(args.testsuite)
-    args.process = Popen(args.engine, stdout=PIPE, stdin=PIPE,
-                         universal_newlines=True, close_fds=ON_POSIX)
     cnt = 0
     for pos in epd:
-        pos = pos.strip()
-        (board, san, result) = parse_position(pos)
-        if result == 'Empty line':
-            print_epd()
+        if not pos:
+            print_epd()  # Empty lines are preserved
             continue
 
         cnt += 1
+        board, san, result = parse_position(pos)
         print("Position: {}/{}\nPos: {}".format(cnt, total, pos))
         if result != 'OK':
             print(result)
             print_epd(pos)  # Don't silently drop invalid positions
             continue
 
-        (bestmove, score1) = run(args, board.fen())
-        bestmove = board.san(chess.Move.from_uci(bestmove))
-        print("Warm-up best move: {}, score: {}".format(bestmove, score1))
+        engine.position(board)
+        bestmove, _ = engine.go(movetime=args.movetime)
+        score1 = engine.info_handlers[0].info["score"][1]
+        bestmove = board.san(bestmove)
+        print("Warm-up best move: {}, score: {}".format(bestmove, pretty(score1)))
         if bestmove == san:
             print("Best move already found!\n\n")
             print_epd()
@@ -131,12 +126,15 @@ def run_session(args):
 
         print("Forcing best move: {}".format(san))
         board.push_san(san)
-        (bestmove, score2) = run(args, board.fen())
-        print("After forcing best move, score: {}\n\n".format(score2))
-        print_epd(pos if compare(score1, score2) else '')
+        engine.position(board)
+        bestmove, _ = engine.go(movetime=args.movetime)
+        score2 = engine.info_handlers[0].info["score"][1]
+        print("After forcing best move, score: {}\n\n".format(pretty(score2)))
 
-    args.process.stdin.close()  # Make the engine to quit
-    args.process.wait()
+        # If score after searching known best move is not higher than baseline
+        # then test is passed. Note that sign is inverted for score2.
+        is_hard = not score1.mate and not score2.mate and score1.cp >= -score2.cp
+        print_epd(pos if is_hard else '')
 
 
 if __name__ == "__main__":
@@ -148,20 +146,24 @@ if __name__ == "__main__":
     p.add_argument("--hash", help="Hash table size in MB", type=int, default=1024)
     args = p.parse_args()
 
-    if not os.path.isfile(args.engine):
-        print("Engine {} not found.".format(args.engine))
-        sys.exit(0)
-
     if not os.path.isfile(args.testsuite):
         print("Testsuite {} not found.".format(args.testsuite))
         sys.exit(0)
 
-    fname = args.testsuite.split('.epd')[0]
-    args.result_epd = fname + '_' + str(args.movetime / 1000) + 'sec.epd'
+    if not os.path.isfile(args.engine):
+        print("Engine {} not found.".format(args.engine))
+        sys.exit(0)
 
-    print("Running DBT on {}, successful positions will be written \ninto {}, "
-          "preserving line number. Each position will \nbe searched for "
-          "{} milliseconds.\n\n"
-          .format(args.testsuite, args.result_epd, args.movetime))
+    engine = prepare_engine(args)
+    if not engine:
+        print("Unable to launch {}.".format(args.engine))
+        sys.exit(0)
 
-    run_session(args)
+    name = args.testsuite.split('.epd')[0]
+    args.result_epd = name + '_' + str(args.movetime / 1000) + 'sec.epd'
+
+    print("Running DBT on: {}\nTime per position: {} millisec\nOutput: {}\n\n"
+          .format(args.testsuite, args.movetime, args.result_epd))
+
+    run_session(args, engine)
+    engine.quit()
