@@ -38,24 +38,25 @@ def parse_position(line):
        to incomplete fen and especially to malformed best moves. We assume the
        checking for empty line is already done upstream."""
 
-    # Now find the best move delimiter, it should be 'bm' but...
-    sep = next((x for x in ['bm', 'am'] if x in line), None)
+    # Find the best move delimiter, it should be 'bm' but...
+    sep = next((x for x in ['bm', 'am', 'pm'] if x in line), None)
     if not sep:
-        return None, None, "Invalid line {}\n\n".format(line)
+        return None, None, "Invalid line: {}\n\n".format(line)
 
     fen, san = line.split(sep)[:2]
     f = fen.split()
     arglist = [fen, ' '.join(f[:6]), ' '.join(f[:4]) + ' 0 1']
     board = try_call(chess.Board, arglist)
     if not board:
-        return None, None, "Invalid fen {}\n\n".format(fen)
+        return None, None, "Invalid fen: {}\n\n".format(fen)
 
-    san = san.replace(';', ' ').replace(',', ' ').replace('!', ' ').split()[0]
+    san = san.replace(';', ' ').replace(',', ' ').replace('!', ' ')
+    san = san.replace(':', ' ').split()[0]
     san = san.replace('0-0-0', 'O-O-O').replace('0-0', 'O-O')
     arglist = [san, san + '+']
-    move = try_call(board.parse_san, arglist)
+    move = try_call(board.parse_san, arglist) or try_call(board.parse_uci, [san])
     if not move:
-        return None, None, "Invalid best move {}\n\n".format(san)
+        return None, None, "Invalid best move: {}\n\n".format(san)
 
     return board, board.san(move), 'OK'
 
@@ -166,4 +167,6 @@ if __name__ == "__main__":
           .format(args.testsuite, args.movetime, args.result_epd))
 
     run_session(args, engine)
+
     engine.quit()
+    engine.terminated.wait()
