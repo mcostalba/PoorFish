@@ -9,18 +9,25 @@ import chess
 import chess.uci
 
 
-def read_epd(fname):
+def read_epd(args):
     """Read epd file preserving empty lines so that in the output epd, the line
-       number of the original position is preserved."""
+       number of the original position is preserved. In case of a partially
+       processed file, we return only the new part."""
+    with open(args.result_epd, 'a+') as f:  # If does not exist create a new one
+        f.seek(0)
+        start = sum(1 for line in f)  # Count already processed lines
     epd = []
     total = 0
-    with open(fname, 'r') as f:
-        for line in f:
+    processed = 0
+    with open(args.testsuite, 'r') as f:
+        for idx, line in enumerate(f):
             line = line.strip()
             epd.append(line)
             if line:
                 total += 1
-    return epd, total
+                if idx < start:
+                    processed += 1
+    return epd[start:], processed, total
 
 
 def try_call(func, arglist):
@@ -64,9 +71,10 @@ def parse_position(line):
 class EpdWriter(object):
     """Syntactic sugar class to append into the output epd file the successful
        positions that passed the test."""
-    def __init__(self, result_epd):
-        self.result_epd = result_epd
-        open(result_epd, 'w').close()  # Clear output file
+    def __init__(self, args):
+        self.result_epd = args.result_epd
+        if not args.append:
+            open(args.result_epd, 'w').close()  # Clear output file
 
     def __call__(self, pos=''):
         with open(self.result_epd, 'a') as f:
@@ -99,9 +107,8 @@ def run_session(args, engine):
        the provided best move is forced and the new position is researched:
        if the score of the second search is still lower than the first one (our
        baseline), then the position is very hard and test succeeded."""
-    print_epd = EpdWriter(args.result_epd)
-    epd, total = read_epd(args.testsuite)
-    cnt = 0
+    print_epd = EpdWriter(args)
+    epd, cnt, total = read_epd(args)
     for pos in epd:
         if not pos:
             print_epd()  # Empty lines are preserved
@@ -145,6 +152,7 @@ if __name__ == "__main__":
     p.add_argument("--movetime", help="Time for position in milliseconds", type=int, default=10000)
     p.add_argument("--threads", help="Number of threads", type=int, default=3)
     p.add_argument("--hash", help="Hash table size in MB", type=int, default=1024)
+    p.add_argument("--append", help="Append to already exsisting file", action="store_true")
     args = p.parse_args()
 
     if not os.path.isfile(args.testsuite):
