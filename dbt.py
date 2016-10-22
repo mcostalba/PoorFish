@@ -5,6 +5,7 @@ from __future__ import print_function
 import argparse
 import os
 import sys
+import threading
 import chess
 import chess.uci
 
@@ -175,6 +176,9 @@ if __name__ == "__main__":
           .format(args.testsuite, args.movetime, args.result_epd))
 
     run_session(args, engine)
-
     engine.quit()
-    engine.terminated.wait()
+
+    # Python-chess uses daemons, so explicitly wait for all threads termination
+    for th in threading.enumerate():
+        if th != threading.current_thread():
+            th.join()
